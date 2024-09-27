@@ -38,7 +38,7 @@ if __name__ == '__main__':
         observations[count] = int((previous + (2 * random.random()) % 2) % K)
         previous = observations[count]
 
-        online_viterbi.update(count, observations[count], initial, A, E)
+        online_viterbi.update(count, observations[count], A, E)
 
         if count == T - 1:
             online_viterbi.traceback_last_part()
